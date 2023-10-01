@@ -25,7 +25,7 @@ def greet(message):
     # Send the screenshot to the user
     bot.send_photo(chat_id=message.chat.id, photo=screenshot_bytes)
 
-@bot.message_handler(commands=['ss_with_OCR'])
+@bot.message_handler(commands=['ocr'])
 def greet(message):
     screenshot = ImageGrab.grab()
     text = pytesseract.image_to_string(screenshot)
